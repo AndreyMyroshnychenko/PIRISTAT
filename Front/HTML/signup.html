@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleSignUp.css">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../images/Earth.jpg" class="mainImg" alt="Earth Image">
+    <div class="container">
+        <div class="SignUpMenu">
+            <h2>Реєстрація</h2>
+            <form id="signupForm" action="/api/signup" method="post">
+                <label for="username">Ім'я користувача:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="email">Електронна пошта:</label>
+                <input type="text" id="email" name="email" required>
+                <br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Зареєструватись</button>
+            </form>
+        </div>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking System</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styleBookingRoom.css">
+</head>
+<body>
+    <div class="header">
+        <a href="mainPage.html" class="menu-btn">Головна сторінка</a>
+        <a href="aboutUs.html" class="menu-btn protected">Про нас</a>
+        <a id="userGreetingLink" href="ProfilePage.html">Guest</a>
+        <button class="logOutButton" id="logoutButton" style="display:none;">Вихід</button>
+    </div>
+    <div class="container">
+        <img src="../images/Earth.jpg" class="mainImg" alt="Earth Image">
+
+        <div class="modal" id="companyModal">
+            <div class="modal-content">
+                <form id="companyForm">
+                    <label for="company">Оберіть компанію:</label>
+                    <select name="company" id="company">
+                        <option value="apple">Apple</option>
+                        <option value="blizzard">Blizzard</option>
+                        <option value="microsoft">Microsoft</option>
+                        <option value="google">Google</option>
+                    </select>
+                    <label for="country">Оберіть країну:</label>
+                    <select name="country" id="country">
+                        <option value="usa">USA</option>
+                        <option value="germany">Germany</option>
+                        <option value="ukraine">Ukraine</option>
+                        <option value="uk">UK</option>
+                    </select>
+                    <button type="submit">Обрати</button>
+                </form>
+                <p id="error-message" style="color: red;"></p>
+            </div>
+        </div>
+
+        <div id="roomsContainer" style="display: none;">
+            <ul class="room-list">
+            </ul>
+        </div>
+
+        <div class="room-details" id="roomDetails" style="display: none;">
+            <div class="room-details-content">
+                <h4 id="roomTitle">Деталі кімнати</h4>
+                <p id="roomDescription">Опис</p>
+                <div id="roomImages">
+                    <button id="prevImage" class="arrow-btn">&larr;</button>
+                    <img id="roomImage" src="../images/OfficeApple1_1.jpg" alt="Room Image" width="300">
+                    <button id="nextImage" class="arrow-btn">&rarr;</button>
+                </div>
+                <label for="bookingTime">Обрати час:</label>
+                <select id="bookingTime">
+                   
+                </select>
+                <br><label for="note" class="noteText">Зробити нотатки:</label>
+                <textarea id="note" rows="4" cols="50" placeholder="Enter any notes here..."></textarea>
+                <p id="noteError" style="color: red;"></p>
+                <div class="buttons">
+                    <button id="bookRoom">Замовити</button>
+                    <button id="closeDetails">Закрити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" style="display: none;"></div>
+    <script src="../scripts.js"></script>
+</body>
+</html>

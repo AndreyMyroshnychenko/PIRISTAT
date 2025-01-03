@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleMainPage.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/styleProfile.css">
+    <title>Profile</title>
+</head>
+<body>
+    <img src="../images/Earth.jpg" class="mainImg" alt="Earth Image">
+    <div class="header">
+        <div class="menu-left">
+            <a href="aboutUs.html" class="menu-btn">Про нас</a>
+            <a href="bookingRoom.html" class="menu-btn">Замовити кімнату</a>
+        </div>
+        <div class="userAvatar">
+            <input type="file" id="avatarInput" style="display:none;">
+            <label for="avatarInput" class="avatarLabel" id="avatarImage"><img src="../images/AvatarDefault.jpg" alt="Avatar" class="ave"></label>
+        </div>
+        <div class="menu-right">
+            <button class="logOutButton" id="logoutButton">Вийти</button>
+            <div class="menuContainer">
+                <div class="menuIcon" id="menuIcon">
+                    <div class="menuBar"></div>
+                    <div class="menuBar"></div>
+                    <div class="menuBar"></div>
+                </div>
+                <div class="sideMenu" id="sideMenu">
+                    <button id="myBookingsBtn">Мої бронювання</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-list" id="bookingList">
+    </div>
+
+    <div class="context-menu" id="contextMenu">
+        <button id="editBookingBtn">Змінити</button>
+        <button id="cancelBookingBtn">Відмінити</button>
+    </div>
+
+    <div class="modal" id="editBookingModal">
+        <label for="bookingTitle">Назва</label>
+        <input type="text" disabled id="bookingTitle" />
+        <label for="bookingStartTime">Початок бронювання</label>
+        <input type="time" disabled id="bookingStartTime" />
+        <label for="bookingEndTime">Кінець бронювання</label>
+        <input type="time" id="bookingEndTime" />
+        <label for="bookingNotes">Нотатки</label>
+        <textarea id="bookingNotes"></textarea>
+        <button id="confirmEditBtn">Підтвердити</button>
+        <button id="cancelEditBtn">Відмінити</button>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+</html>

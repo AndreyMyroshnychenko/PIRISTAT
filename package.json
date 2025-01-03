@@ -1,0 +1,54 @@
+{
+  "name": "diplomawork",
+  "version": "1.0.0",
+  "description": "Software App For Booking Meeting Rooms Іn The Offices Of IT Companies.",
+  "main": "Front/main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-server": "node Back/server.js",
+    "start-electron": "electron .",
+    "start": "npm-run-all --parallel start-server start-electron",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.app.id",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyMyroshnychenko/DiplomaWork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreyMyroshnychenko/DiplomaWork/issues"
+  },
+  "homepage": "https://github.com/AndreyMyroshnychenko/DiplomaWork#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.4",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.3.4",
+    "morgan": "^1.10.0",
+    "readline": "^1.3.0",
+    "session": "^0.1.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.1",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "keywords": []
+}
